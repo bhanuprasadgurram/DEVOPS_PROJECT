@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Coding Tracker</h1>
+            <p class="subtitle">Practice coding challenges and get instant AI feedback</p>
+        </header>
+
+        <main>
+            <section class="challenges-section">
+                <h2>Available Challenges</h2>
+                <div id="challengesList" class="challenges-grid">
+                    <div class="loading">Loading challenges...</div>
+                </div>
+            </section>
+
+            <section class="code-section" id="codeSection" style="display: none;">
+                <div class="section-header">
+                    <h2 id="challengeTitle">Challenge Title</h2>
+                    <button class="btn-secondary" onclick="backToChallenges()">Back to Challenges</button>
+                </div>
+
+                <div class="challenge-details">
+                    <div class="difficulty-badge" id="difficultyBadge">Easy</div>
+                    <p id="challengeDescription">Challenge description goes here...</p>
+
+                    <div class="test-cases" id="testCases"></div>
+                </div>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <label for="languageSelect">Language:</label>
+                        <select id="languageSelect">
+                            <option value="python">Python</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="java">Java</option>
+                        </select>
+                    </div>
+                    <textarea id="codeEditor" placeholder="Write your solution here..."></textarea>
+                    <button class="btn-primary" onclick="submitCode()">Submit Code</button>
+                </div>
+            </section>
+
+            <section class="feedback-section" id="feedbackSection" style="display: none;">
+                <h2>AI Feedback</h2>
+                <div id="feedbackContent" class="feedback-content">
+                    <div class="loading">Analyzing your code...</div>
+                </div>
+                <button class="btn-primary" onclick="tryAgain()">Try Again</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 AI Coding Tracker. Built with FastAPI and vanilla JavaScript.</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
